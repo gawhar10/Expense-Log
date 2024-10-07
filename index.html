@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Register</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./main.js" async></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="block app_name_block">
+        <h1 class="head_lbl">Expense Log</h1>
+        <hr />
+      </div>
+
+      <form class="block">
+        <h2>Save your log</h2>
+        <div>
+          <label for="itemName">Name</label>
+          <input type="text" name="Item Name" id="itemName" />
+        </div>
+        <div>
+          <label for="itemCost">Cost</label>
+          <input
+            type="number"
+            oninput="this.value = Math.round(this.value);"
+            name="Item Cost"
+            id="itemCost"
+          />
+        </div>
+        <div>
+          <p class="warning_msg" id="warningMsg"></p>
+          <input type="button" value="Save" class="save_input" id="saveInput" />
+        </div>
+        <hr />
+      </form>
+
+      <div class="block">
+        <h3>Summary</h3>
+        <div class="summery">
+          <div>
+            <p>
+              Total Items
+              <span id="totalItems">0</span>
+            </p>
+            <p>
+              Total Spent
+              <span id="totalSpent">0.0</span>
+              &#8377;
+            </p>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <div class="block">
+        <div class="history_heading_block">
+          <h4>Log History</h4>
+          <button class="clear_all_btn" id="clearAll">Clear All</button>
+        </div>
+        <ul class="list" id="logList"></ul>
+      </div>
+    </main>
+  </body>
+</html>
