@@ -20,11 +20,14 @@ html {
 }
 
 main {
-  max-width: 320px;
+  max-width: 420px;
   /* border: 1px solid grey; */
   margin: 2rem auto; /* to center container. */
-  border-radius: .5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  border-radius: 0.5rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   padding: 2rem;
 }
 
@@ -42,7 +45,8 @@ h2 {
   font-weight: 400;
 }
 
-h3, h4 {
+h3,
+h4 {
   font-family: var(--font);
   font-size: var(--font-small);
   font-weight: 600;
@@ -61,7 +65,7 @@ form > div {
 }
 
 form > div > input {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   font-family: var(--font);
   font-size: var(--font-small);
@@ -75,7 +79,7 @@ form label {
 .warning_msg {
   font-family: var(--font);
   font-size: var(--font-small);
-  color:crimson;
+  color: crimson;
 }
 
 .save_input {
@@ -98,7 +102,7 @@ hr {
 }
 
 .summery > div > p {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .clear_all_btn {
@@ -134,7 +138,6 @@ img {
   width: 100%;
   height: auto;
   color: white;
-
 }
 
 .remove_btn {
@@ -147,8 +150,5 @@ img {
 @media (max-width: 460px) {
   main {
     box-shadow: none;
-    /* margin-top: 1rem; */
-    padding: 0;
-    /* border: 1px solid teal; */
   }
 }
