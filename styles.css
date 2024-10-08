@@ -150,5 +150,6 @@ img {
 @media (max-width: 460px) {
   main {
     box-shadow: none;
+    padding-top: 1rem;
   }
 }
