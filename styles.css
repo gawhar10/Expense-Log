@@ -9,19 +9,21 @@ html {
 }
 
 :root {
-  --font: "Inter", sans-serif;
+  --font: Inter, sans-serif;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1; /* fix for Chrome */
   --font-big: 2rem;
   --font-medium: 1.8rem;
   --font-small: 1.6rem;
-  --smoky-white: rgb(239, 240, 246);
+  --font-toSmall: 1.3rem;
   --jet-black: rgb(41, 43, 45);
-  /* --royal-blue: rgb(69, 88, 200); */
-  --salmon-orange: rgb(239, 94, 55);
+  --teal: rgb(46, 118, 94);
+  --crimson: rgb(220, 20, 60);
 }
 
 main {
   max-width: 420px;
-  /* border: 1px solid grey; */
   margin: 2rem auto; /* to center container. */
   border-radius: 0.5rem;
   box-shadow:
@@ -66,9 +68,16 @@ form > div {
 
 form > div > input {
   margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   font-family: var(--font);
   font-size: var(--font-small);
+  border-style: none;
+  border: 1px solid var(--teal);
+}
+
+form > div > input:focus {
+  outline: none;
+  border: 3px solid var(--teal);
 }
 
 form label {
@@ -78,19 +87,22 @@ form label {
 
 .warning_msg {
   font-family: var(--font);
-  font-size: var(--font-small);
-  color: crimson;
+  font-size: var(--font-toSmall);
+  font-weight: 700;
+  color: var(--crimson);
 }
 
 .save_input {
   border-style: none;
-  background-color: #2e765e;
+  background-color: var(--teal);
   color: #ffffff;
 }
 
 hr {
   margin: 1rem 0;
-  border-top: 1px;
+  border: none;
+  border-top: 1px solid var(--teal);
+  opacity: 0.4;
 }
 
 .summery {
@@ -108,10 +120,13 @@ hr {
 .clear_all_btn {
   border-style: none;
   background-color: unset;
-  border-bottom: 1px solid var(--jet-black);
-  color: var(--jet-black);
+  color: var(--teal);
   font-family: var(--font);
   font-size: var(--font-small);
+}
+
+.clear_all_btn:hover {
+  border-bottom: 1px solid var(--teal);
 }
 
 .history_heading_block {
@@ -121,16 +136,14 @@ hr {
 }
 
 ul li {
-  list-style: none;
-  /* background-color: #f2f0ef; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   font-family: var(--font);
   font-size: var(--font-small);
-  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
+  border: 1px solid rgba(46, 118, 94, 0.4);
 }
 
 img {
@@ -143,7 +156,7 @@ img {
 .remove_btn {
   max-width: 2.4rem;
   background-color: #ffffff;
-  border: 1px solid #2e765e;
+  border: 1px solid rgba(46, 118, 94, 0.4);
   border-radius: 50%;
 }
 
