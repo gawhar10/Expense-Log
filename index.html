@@ -12,12 +12,12 @@
 
   <body>
     <main>
-      <div class="block app_name_block">
-        <h1 class="head_lbl">Expense Log</h1>
+      <div>
+        <h1>Expense Log</h1>
         <hr />
       </div>
 
-      <form class="block">
+      <form>
         <h2>Save your log</h2>
         <div>
           <label for="itemName">Name</label>
@@ -39,28 +39,28 @@
         <hr />
       </form>
 
-      <div class="block">
+      <div>
         <h3>Summary</h3>
         <div class="summery">
-          <div>
-            <p>
-              Total Items
-              <span id="totalItems">0</span>
-            </p>
-            <p>
-              Total Spent
-              <span id="totalSpent">0.0</span>
-              &#8377;
-            </p>
-          </div>
+          <p>
+            Total Items
+            <span id="totalItems">0</span>
+          </p>
+          <p>
+            Total Spent
+            <span id="totalSpent">0.0</span>
+            &#8377;
+          </p>
         </div>
         <hr />
       </div>
 
-      <div class="block">
+      <div>
         <div class="history_heading_block">
-          <h4>Log History</h4>
-          <button class="clear_all_btn" id="clearAll">Clear All</button>
+          <h3>Log History</h3>
+          <button class="clear_all_btn" id="clearAll">
+            <img src="./img/clear_all.png" alt="clear all" />
+          </button>
         </div>
         <ul class="list" id="logList"></ul>
       </div>
